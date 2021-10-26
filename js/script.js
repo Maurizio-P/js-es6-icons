@@ -116,19 +116,18 @@ const arrayAnimal = []
 const arrayVegetable = []
 const arrayUser = []
 
-function forArray(array){
-    for (let i = 0; i < array.length; i++) {
-        const {type} = array[i];
-        if (type === "animal"){
-            arrayAnimal.push(array[i])
-        }
-        if (type === "vegetable"){
-            arrayVegetable.push(array[i])
-        }
-        if (type === "user"){
-            arrayUser.push(array[i])
-        }
-    }
+
+for (let i = 0; i < Listicons.length; i++) {
+	const {type} = Listicons[i];
+	if (type === "animal"){
+		arrayAnimal.push(Listicons[i])
+	}
+	if (type === "vegetable"){
+		arrayVegetable.push(Listicons[i])
+	}
+	if (type === "user"){
+		arrayUser.push(Listicons[i])
+	}
 }
 
 
@@ -144,8 +143,7 @@ function stampInHTML(array){
     }
 }
 
-
-forArray(Listicons)
+stampInHTML(Listicons)
 select.addEventListener("change", function () {
     
     if (select.value === "all") {
